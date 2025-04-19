@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Love 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffc1e3, #ffe4f2);
+      font-family: 'Segoe UI', sans-serif;
+      color: #d63384;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .message-box {
+      background: #fff0f7;
+      border: 3px solid #ff99cc;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(255, 128, 171, 0.5);
+      max-width: 90%;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6em;
+    }
+
+    .animation span {
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: float 10s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .heart {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
+    }
+
+    .flower {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/3534/3534065.png');
+    }
+  </style>
+</head>
+<body>
+  <div class="message-box">
+    <h1>To the Love of My Life 💍</h1>
+    <p>
+      From the moment we met, my world became brighter and my heart fuller. 💗<br>
+      As we take this next step together, I just want you to know...<br><br>
+      You are my today, all my tomorrows, and everything in between. 🌸<br>
+      I can't wait to spend forever with you. 💕<br><br>
+      With all my love,<br>
+      — Your Forever Person 💖
+    </p>
+  </div>
+
+  <div class="animation">
+    <!-- Hearts and flowers floating randomly -->
+    <script>
+      const icons = ['heart', 'flower'];
+      for (let i = 0; i < 30; i++) {
+        const el = document.createElement('span');
+        const type = icons[Math.floor(Math.random() * icons.length)];
+        el.className = type;
+        el.style.left = Math.random() * 100 + 'vw';
+        el.style.animationDuration = (5 + Math.random() * 5) + 's';
+        document.body.appendChild(el);
+      }
+    </script>
+  </div>
+</body>
+</html>
